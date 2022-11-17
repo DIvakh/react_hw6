@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import {
+  BrowserRouter,
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from 'react-router-dom';
+import Home from './pages/Home';
+import Popular from './pages/Popular';
+import Battle from './pages/Battle';
+import Header from './components/Header';
+import Spinner from './components/Spinner';
+import './index.css';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className='container>'>
+        <Header />
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='battle' element={<Battle />} />
+          <Route path='popular' element={<Popular />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
