@@ -1,3 +1,3 @@
 export default function Battle() {
-  return <div>Battle</div>;
+  return <div className='container'>Battle</div>;
 }
