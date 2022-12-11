@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import Repo from '../components/Repo';
 import Spinner from '../components/Spinner';
 import SelectedLang from '../components/SelectLang';
-import getPopularRepo from '../api';
+import { getPopularRepo } from '../api';
 
 export default function Popular() {
   const [searchParams, setSearchParams] = useSearchParams({ lang: 'All' });

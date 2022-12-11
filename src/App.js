@@ -1,12 +1,8 @@
-import {
-  BrowserRouter,
-  BrowserRouter as Router,
-  Route,
-  Routes
-} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Popular from './pages/Popular';
 import Battle from './pages/Battle';
+import Results from './pages/Results';
 import Header from './components/Header';
 
 import './index.css';
@@ -22,6 +18,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='battle' element={<Battle />} />
           <Route path='popular' element={<Popular />} />
+          <Route path='battle/results' element={<Results />} />
         </Routes>
       </div>
     </BrowserRouter>
